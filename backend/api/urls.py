@@ -9,5 +9,4 @@ router.register(r'tasks', ListItemViewSet, basename='task')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('health/', health_check),
 ]
