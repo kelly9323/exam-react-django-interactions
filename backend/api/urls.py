@@ -1,7 +1,7 @@
 # api/urls.py
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import CategoryViewSet, ListItemViewSet, health_check
+from .views import CategoryViewSet, ListItemViewSet
 
 router = DefaultRouter()
 router.register(r'categories', CategoryViewSet)
