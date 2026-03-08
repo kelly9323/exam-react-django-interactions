@@ -1,7 +1,14 @@
 # views.py
 from rest_framework import viewsets
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from .models import Category, ListItem
 from .serializers import CategorySerializer, ListItemSerializer
+
+
+@api_view(['GET'])
+def health_check(request):
+    return Response({'status': 'ok'})
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
