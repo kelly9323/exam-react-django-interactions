@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Category, Task } from "../types/types";
-const API_BASE = import.meta.env.VITE_API_BASE as string;
+const API_BASE = import.meta.env.VITE_API_URL as string;
 
 export const getCategories = async (): Promise<Category[]> => {
   const res = await axios.get<Category[]>(`${API_BASE}/categories/`);
